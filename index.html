@@ -5,155 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tech Skills Academy</title>
-  <meta name="description" content="Tech Skills Academy offers a wide range of IT training courses for students, professionals, and working adults.">
+  <title>Tech Skills</title>
+  <meta name="description" content="Tech Skills offers a wide range of IT training courses for students, professionals, and working adults.">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles2.css">
 </head>
 
 <body>
 
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about-us.html">About Us</a></li>
-        <li><a href="pages/course-list.html">Course</a>
-          <ul>
-            <li><a href="pages/course-list.html">Programming</a>
-              <ul>
-                <li><a href="pages/java-course.html">Programming in Java</a></li>
-                <li><a href="pages/dotnet-course.html">.Net Programming</a></li>
-                <li><a href="pages/html-course.html">Web Page Creation with HTML</a></li>
-              </ul>
-            </li>
-            <li><a href="pages/course-list.html">Office Tools</a>
-              <ul>
-                <li><a href="#">Microsoft Office</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="pages/sitemap.html">Sitemap</a></li>
-        <li><a href="pages/contact-us.html">Contact Us</a></li>
-        <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="nav-bar">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="Tech Skills Logo">
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit" class="search-button">
+              <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          
+          <a href="#" class="sign-in">Sign In</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
-    
-    <section class="main-header">
-      <h1>Unlock Your Potential with Our Courses!</h1>
-      <h2>Gain the skills you need to excel in today's fast-paced world.</h2>
-      <a href="pages/lead-form.html"><button>Get Started</button></a> <!-- Link to Lead Generation Form page -->
-    </section>
-
-    <!-- Why Learn Section -->
-    <section id="why-learn">
-      <h2>Why Learn with Tech Skills Academy:</h2>
-      <div class="image-item">
-        <div class="image-gallery">
-          <img src="assets/images/course.svg" alt="Diverse Course Offerings">
-        </div>
-        <div class="image-text">
-          <h3>Diverse Course Offerings</h3>
-          <p>Explore a diverse selection of courses designed to enhance skills and empower learners.</p>
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image-gallery">
-          <img src="assets/images/flexible.svg" alt="Flexible Learning Options">
-        </div>
-        <div class="image-text">
-          <h3>Flexible Learning Options</h3>
-          <p>Our courses fit your schedule and goals, whether you're a student, professional, or adult
-            learner.</p>
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image-gallery">
-          <img src="assets/images/expert.svg" alt="Expert Instructors">
-        </div>
-        <div class="image-text">
-          <h3>Expert Instructors</h3>
-          <p>Learn from industry professionals dedicated to guiding you through each course.</p>
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image-gallery">
-          <img src="assets/images/progress.svg" alt="Certification for Career Growth">
-        </div>
-        <div class="image-text">
-          <h3>Certification for Career Growth</h3>
-          <p>Earn recognized certificates that enhance your resume and career prospects.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Alumni Section -->
-    <section id="alumni-section">
-      <h2>What Our Alumni Say:</h2>
-      <div class="testimonial-wrapper">
-        <div class="testimonial-container">
-
-          <div class="testimonial">
-            <img src="assets/images/testimonial1.png" alt="Shao Kahn">
-            <div class="testimonial-content">
-              <h3>Shao Kahn</h3>
-              <h4>Software Engineer at <strong>Google</strong></h4>
-              <blockquote>"Tech Skills Academy transformed my career by providing hands-on lessons that gave
-                me confidence in coding."</blockquote>
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <img src="assets/images/testimonial2.png" alt="Gianna Michaels">
-            <div class="testimonial-content">
-              <h3>Gianna Michaels</h3>
-              <h4>Data Engineer at <strong>Lumon</strong></h4>
-              <blockquote>"The structured curriculum took me from a beginner to a confident coder, landing
-                my first engineering job."</blockquote>
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <img src="assets/images/testimonial3.png" alt="Emma Frost">
-            <div class="testimonial-content">
-              <h3>Emma Frost</h3>
-              <h4>Software Engineer at <strong>Spotify</strong></h4>
-              <blockquote>"Tech Skills Academy's program helped me master programming, data structures, and
-                algorithms."</blockquote>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Join Us Section -->
-    <section id="join-us">
-      <div class="join-us-content">
-        <div class="join-us-image">
-          <img src="assets/images/signup.svg" alt="Sign Up">
-        </div>
-        <div class="join-us-text">
-          <h2>Joins us now!</h2>
-          <p>If you've made it this far, you must be at least a little curious. Sign up and take the first
-            step toward your goals.</p>
-          <a href="pages/lead-form.html"><button>Sign Up</button></a> <!-- Link to Lead Generation Form page -->
-        </div>
-      </div>
-    </section>
 
   </main>
 
   <footer>
-    <p>&copy; Tech Skills Academy. All rights reserved.</p>
+    <p>&copy; Tech Skills 2026. All rights reserved.</p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
