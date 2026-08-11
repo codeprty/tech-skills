@@ -46,3 +46,19 @@ function changeSlide() {
 typeText();
 
 setInterval(changeSlide, 4000);
+
+const dropdowns = document.querySelectorAll(".nav-dropdown");
+
+dropdowns.forEach((dropdown) => {
+  const toggle = dropdown.querySelector(".dropdown-toggle");
+
+  toggle.addEventListener("click", () => {
+    dropdowns.forEach((item) => {
+      if (item !== dropdown) {
+        item.classList.remove("open");
+      }
+    });
+
+    dropdown.classList.toggle("open");
+  });
+});
