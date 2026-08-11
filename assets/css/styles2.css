@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
 
 :root {
   --primary-color: #000000;
@@ -219,7 +219,7 @@ body {
 }
 
 .hero-overlay .typing-text {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .typing-text::after {
