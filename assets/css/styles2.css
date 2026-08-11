@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --text-color: #060c1a;
+  --primary-color: #000000;
+  --text-color: #ffffff;
 }
 
 /* ========================================
@@ -21,14 +22,17 @@ html {
 }
 
 body {
-  font-family: 'Cantarell', sans-serif;
-  color: var(--text-color);
+  font-family: 'Noto Sans', sans-serif;
   min-height: 100vh;
 }
 
 /* ========================================
    Navigation
    ======================================== */
+
+.home-header {
+  background-color: var(--primary-color);
+}
 
 .container {
   max-width: 1200px;
@@ -49,7 +53,7 @@ body {
 }
 
 .logo img {
-  height: 35px;
+  height: 30px;
   width: auto;
 }
 
@@ -57,34 +61,101 @@ body {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
   margin-left: auto;
 }
 
 .nav-links a {
-  display: block;
-  padding: 0.5rem 0;
   text-decoration: none;
   color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav-links a:hover,
+.log-in:hover {
+  color: #fecc03;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 34px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.search-bar input::placeholder {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.log-in,
+.sign-up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.nav-bar a:hover {
-  color: #2563eb;
+.log-in {
+  color: var(--text-color);
 }
 
-nav a {
-  color: var(--text-color);
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
+.log-in:hover {
+  color: #fecc03;
+  background-color: #30302f;
+}
+
+.sign-up {
+  background-color: #fecc03;
+  color: #000000;
+}
+
+.sign-up:hover {
+  background-color: #d5ab04;
 }
 
 /* ========================================
@@ -92,13 +163,13 @@ nav a {
    ======================================== */
 
 .hero {
-  padding: 2rem 0;
-  background-color: var(--text-color);
+  padding: 2rem 0 5rem;
+  background-color: var(--primary-color);
 }
 
 .hero-slider {
   position: relative;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -118,14 +189,18 @@ nav a {
 .hero-slide img {
   display: block;
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
+}
+
+.hero-content {
+  min-height: 150px;
 }
 
 .hero-overlay {
   position: absolute;
-  left: 2rem;
-  top: 2rem;
+  left: 1rem;
+  top: 1rem;
   color: #fff;
 }
 
@@ -136,7 +211,7 @@ nav a {
   margin: 0 0 0.5rem 0;
   border-radius: 12px;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero-overlay h1:last-child {
