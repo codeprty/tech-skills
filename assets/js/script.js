@@ -45,4 +45,4 @@ function changeSlide() {
 
 typeText();
 
-setInterval(changeSlide, 6500);
+setInterval(changeSlide, 4000);
