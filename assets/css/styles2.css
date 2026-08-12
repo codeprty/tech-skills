@@ -16,6 +16,12 @@
   --border-color: #9ca3af;
   --muted-color: #9ca3af;
 
+  /* Typing Text Colors */
+  --code-orange: #ff8800;
+  --code-yellow: #ffd700;
+  --code-green: #39ff14;
+  --code-blue: #1e90ff;
+
   /* Fonts */
   --font-primary: 'Noto Sans', sans-serif;
   --font-code: 'Source Code Pro', monospace;
@@ -38,7 +44,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: var(--font-primary);
   min-height: 100vh;
 }
 
@@ -91,7 +97,7 @@ body {
 .dropdown-toggle {
   text-decoration: none;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
 }
 
@@ -189,13 +195,13 @@ body {
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-family: inherit;
 }
 
 .search-bar input::placeholder {
   color: var(--muted-color);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
 }
 
 .search-button {
@@ -224,8 +230,8 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .log-in {
@@ -299,15 +305,11 @@ body {
   margin-bottom: 0.5rem;
   border-radius: 12px;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hero-overlay h1:last-child {
   margin-bottom: 0;
-}
-
-.hero-overlay .typing-text {
-  font-family: "Source Code Pro", monospace;
 }
 
 .typing-text::after {
@@ -322,4 +324,24 @@ body {
   50% {
     opacity: 0;
   }
+}
+
+.typing-text {
+  font-family: var(--font-code);
+}
+
+.typing-text.orange {
+  color: var(--code-orange);
+}
+
+.typing-text.yellow {
+  color: var(--code-yellow);
+}
+
+.typing-text.green {
+  color: var(--code-green);
+}
+
+.typing-text.blue {
+  color: var(--code-blue);
 }
