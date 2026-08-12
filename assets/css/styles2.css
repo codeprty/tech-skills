@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
 
+/* ========================================
+   Variables
+   ======================================== */
+
 :root {
+  /* Colors */
   --primary-color: #000000;
   --text-color: #ffffff;
+  --accent-color: #fecc03;
+  --accent-hover-color: #d5ab04;
+  --surface-color: #ffffff;
+  --surface-light-color: #f3f3f3;
+  --surface-dark-color: #30302f;
+  --border-color: #9ca3af;
+  --muted-color: #9ca3af;
+
+  /* Fonts */
+  --font-primary: 'Noto Sans', sans-serif;
+  --font-code: 'Source Code Pro', monospace;
 }
 
 /* ========================================
@@ -80,9 +96,8 @@ body {
 }
 
 .nav-links a:hover,
-.dropdown-toggle:hover,
-.log-in:hover {
-  color: #fecc03;
+.dropdown-toggle:hover {
+  color: var(--accent-color);
 }
 
 .nav-dropdown {
@@ -115,7 +130,7 @@ body {
   min-width: 180px;
   padding: 0.5rem 0;
   list-style: none;
-  background-color: #ffffff;
+  background-color: var(--surface-color);
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
@@ -130,15 +145,15 @@ body {
 .dropdown-menu a {
   display: block;
   padding: 0.6rem 1rem;
-  color: #000000;
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 400;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f3f3f3;
-  color: #000000;
+  background-color: var(--surface-light-color);
+  color: var(--primary-color);
 }
 
 .search-bar {
@@ -146,9 +161,9 @@ body {
   align-items: center;
   width: 280px;
   height: 34px;
-  border: 1px solid #9ca3af;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: var(--surface-color);
   overflow: hidden;
 }
 
@@ -164,7 +179,7 @@ body {
 }
 
 .search-bar input::placeholder {
-  color: #9ca3af;
+  color: var(--muted-color);
   font-size: 0.875rem;
 }
 
@@ -177,7 +192,7 @@ body {
   padding: 0;
   border: none;
   background: transparent;
-  color: #9ca3af;
+  color: var(--muted-color);
   cursor: pointer;
 }
 
@@ -203,21 +218,21 @@ body {
 }
 
 .log-in:hover {
-  color: #fecc03;
-  background-color: #30302f;
+  color: var(--accent-color);
+  background-color: var(--surface-dark-color);
 }
 
 .sign-up {
-  background-color: #fecc03;
-  color: #000000;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 .sign-up:hover {
-  background-color: #d5ab04;
+  background-color: var(--accent-hover-color);
 }
 
 /* ========================================
-   Hero Banner
+   Header / Hero
    ======================================== */
 
 .hero {
@@ -259,14 +274,14 @@ body {
   position: absolute;
   left: 1rem;
   top: 1rem;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .hero-overlay h1 {
   width: fit-content;
-  background: #000;
+  background: var(--primary-color);
   padding: 0.5rem 1rem;
-  margin: 0 0 0.5rem 0;
+  margin-bottom: 0.5rem;
   border-radius: 12px;
   font-size: 4rem;
   font-weight: 400;
