@@ -2,10 +2,10 @@ const slides = document.querySelectorAll(".hero-slide");
 const typingText = document.querySelector(".typing-text");
 
 const slideWords = [
-  "/self",
-  "/skills",
-  "/potential",
-  "/career"
+  { word: "/self", color: "orange" },
+  { word: "/skills", color: "yellow" },
+  { word: "/potential", color: "green" },
+  { word: "/career", color: "blue" }
 ];
 
 let currentSlide = 0;
@@ -17,8 +17,8 @@ function typeText() {
 
   typingText.classList.remove("blink");
 
-  if (characterIndex < currentWord.length) {
-    typingText.textContent = currentWord.substring(0,characterIndex + 1);
+  if (characterIndex < currentWord.word.length) {
+    typingText.textContent = currentWord.word.substring(0, characterIndex + 1);
 
     characterIndex++;
 
@@ -40,9 +40,13 @@ function changeSlide() {
   characterIndex = 0;
   typingText.textContent = "";
 
+  typingText.classList.remove("orange", "yellow", "green", "blue");
+  typingText.classList.add(slideWords[currentSlide].color);
+
   typeText();
 }
 
+typingText.classList.add(slideWords[0].color);
 typeText();
 
 setInterval(changeSlide, 4000);
